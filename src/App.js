@@ -44,7 +44,7 @@ function App() {
   };
 
   return (
-    <React.Fragment>
+    <React.Fragment><div>
       <NewTask onAddTask={taskAddHandler} />
       <Tasks
         items={tasks}
@@ -52,6 +52,16 @@ function App() {
         error={error}
         onFetch={fetchTasks}
       />
+    </div>
+    <div>
+    <NewTask onAddTask={taskAddHandler} />
+      <Tasks
+        items={tasks}
+        loading={isLoading}
+        error={error}
+        onFetch={fetchTasks}
+      />
+    </div>
     </React.Fragment>
   );
 }
